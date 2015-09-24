@@ -1,5 +1,5 @@
 func addRomanNumerals (left: String, right: String) -> String {
-    return left + right
+    return isToRomanNumeral(romanNumeralToIs(left) + romanNumeralToIs(right))
 }
 
 func romanNumeralToIs (roman: String) -> String {
@@ -8,8 +8,14 @@ func romanNumeralToIs (roman: String) -> String {
     }
 }
 
+func isToRomanNumeral(i:String) -> String {
+    return i
+}
+
 assert(addRomanNumerals("I", right: "I") == "II")
 assert(addRomanNumerals("I", right: "II") == "III")
+assert(addRomanNumerals("I", right: "III") == "IV")
+
 
 
 
